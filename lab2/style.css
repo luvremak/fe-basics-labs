@@ -1,0 +1,45 @@
+/* ЛР2, завдання 2: прапор Японії (варіант 9) лише засобами CSS.
+   Пропорції прапора 3:2, діаметр кола — 3/5 висоти, коло в центрі.
+   Полотно 300 × 200 px, коло 120 px: відступи зліва (300 − 120) / 2 = 90 px,
+   згори (200 − 120) / 2 = 40 px. */
+
+.flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.flags figure {
+  margin: 0;
+}
+
+.flag {
+  width: 300px;
+  height: 200px;
+  background-color: #ffffff;
+  border: 1px solid #8c8c8c;
+}
+
+.flag__disc {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #bc002d;
+}
+
+/* 1. position: коло позиціонується абсолютно відносно полотна */
+.flag--position {
+  position: relative;          /* полотно стає «контейнером» для абсолютного позиціонування */
+}
+
+.flag--position .flag__disc {
+  position: absolute;
+  top: 40px;
+  left: 90px;
+}
+
+/* 2. transform: коло лишається у звичайному потоці (у лівому верхньому куті)
+   і переміщується лише функцією translate() */
+.flag--transform .flag__disc {
+  transform: translate(90px, 40px);
+}
