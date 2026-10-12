@@ -1,0 +1,54 @@
+/* ЛР3, завдання 2: той самий макет (варіант 9) технологією Flexbox.
+   Макет не є «гільйотинним» (жоден прямий розріз не ділить його на два
+   прямокутники), тому блоки згруповано у вкладені флекс-контейнери:
+   ліва частина 70% і права колонка 30%. */
+
+.layout--flex {
+  display: flex;
+  align-items: stretch;
+}
+
+.flex-main {                       /* ліва частина макету: 30% + 40% */
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.flex-top {                        /* верхній ряд лівої частини */
+  display: flex;
+  flex: 1;
+}
+
+.flex-top > .block--img-left {
+  width: 42.857%;                  /* 30% від усієї ширини макету */
+}
+
+.flex-top-right {
+  display: flex;
+  flex-direction: column;
+  width: 57.143%;                  /* 40% від усієї ширини макету */
+}
+
+.flex-top-right > .block--img-main {
+  flex: 1;
+}
+
+.flex-side {                       /* права колонка: 30% */
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.flex-side > .block--text-side {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .layout--flex,
+  .flex-main,
+  .flex-top { flex-direction: column; }
+  .flex-main,
+  .flex-side,
+  .flex-top > .block--img-left,
+  .flex-top-right { width: 100%; }
+}

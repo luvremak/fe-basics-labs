@@ -1,0 +1,29 @@
+/* ЛР3, завдання 1: блочна верстка макету (варіант 9) технологією float.
+   Усі п'ять блоків — сусідні елементи одного контейнера; їх взаємне
+   розташування визначає сам алгоритм обтікання, ширини задано у відсотках. */
+
+.layout--float::after {
+  content: "";
+  display: block;
+  clear: both;                     /* контейнер «обіймає» плаваючі блоки */
+}
+
+.layout--float > .block {
+  float: left;
+}
+
+/* Праву колонку зроблено float: right свідомо. За правилом 2 з CSS 2.1 §9.5.1
+   пізніший лівий float має стояти праворуч від раніших лівих float-ів або нижче
+   за них, тож при float: left у правій колонці нижня смуга опускалася б під неї.
+   Для правого float діє інше правило (3), і смуга стає поруч, як на макеті. */
+.layout--float > .block--text-side   { float: right; }
+
+.layout--float > .block--img-left    { width: 30%; }
+.layout--float > .block--text-top    { width: 70%; }
+.layout--float > .block--img-main    { width: 40%; }
+.layout--float > .block--text-side   { width: 30%; }
+.layout--float > .block--text-bottom { width: 70%; }
+
+@media (max-width: 600px) {
+  .layout--float > .block { float: none; width: 100%; }
+}

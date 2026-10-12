@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лабораторна робота №3: верстка того самого макету сайту (варіант 9) технологією Flexbox. Крошка Д. О., ІМ-44, варіант 59.">
+  <meta name="keywords" content="HTML5, CSS3, верстка, flexbox, flex, макет сайту, ІМ-44">
+  <meta name="author" content="Крошка Дар'я Олександрівна">
+  <title>Крошка Д. О., ІМ-44 — ЛР3, flex</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/flex.css">
+</head>
+<body>
+  <h1>Лабораторна робота №3. Завдання 2: верстка на Flex</h1>
+  <p class="subtitle">Той самий макет варіанту 9, зібраний із вкладених флекс-контейнерів.</p>
+  <nav class="nav"><a href="index.html">← Версія на float</a></nav>
+
+  <div class="layout layout--flex">
+    <div class="flex-main">
+      <div class="flex-top">
+        <div class="block block--img-left">IMG</div>
+        <div class="flex-top-right">
+          <div class="block block--text-top">TEXT</div>
+          <div class="block block--img-main">IMG</div>
+        </div>
+      </div>
+      <div class="block block--text-bottom">TEXT</div>
+    </div>
+
+    <div class="flex-side">
+      <div class="block block--text-top" aria-hidden="true"></div>
+      <div class="block block--text-side">TEXT</div>
+    </div>
+  </div>
+</body>
+</html>
