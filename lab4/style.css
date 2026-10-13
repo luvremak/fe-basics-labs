@@ -1,0 +1,102 @@
+/* ЛР4. Оформлення сторінки ЛР1 та елементів, з якими працює script.js. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 16px 56px;
+  background-color: #f6f5f2;
+  color: #1f2328;
+  font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 32px 36px;
+  background-color: #ffffff;
+  border: 1px solid #dcd9d2;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+ul,
+ol {
+  padding-left: 24px;
+}
+
+figure {
+  margin: 24px 0 12px;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #55606b;
+}
+
+/* Галерея: ширину зображень змінює script.js (кнопки «Збільшити» / «Зменшити») */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gallery img {
+  width: 70%;
+  height: auto;
+  display: block;
+  border: 1px solid #c9c4bb;
+}
+
+/* Кнопки керування зображенням */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.controls button {
+  padding: 8px 18px;
+  font: inherit;
+  font-size: 0.95rem;
+  color: #1f2328;
+  background-color: #e9e6e0;
+  border: 1px solid #b7b1a7;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls button:hover:not(:disabled) {
+  background-color: #ded9d1;
+}
+
+.controls button:disabled {
+  color: #8b8b8b;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #55606b;
+}
+
+/* Підказка, що на цих двох елементах працює клік (клас додає script.js) */
+.js-clickable {
+  cursor: pointer;
+}
+
+.js-clickable:hover {
+  outline: 1px dashed #8b8b8b;
+  outline-offset: 2px;
+}
