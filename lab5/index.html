@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лабораторна робота №5: події DOM і регулярні вирази — перевірка форми та таблиця 6×6 з реакцією на mouseover, click і dblclick. Крошка Д. О., ІМ-44, варіант 59.">
+  <meta name="keywords" content="JavaScript, події, регулярні вирази, валідація форми, mouseover, click, dblclick, ІМ-44, КПІ">
+  <meta name="author" content="Крошка Дар'я Олександрівна">
+  <title>Крошка Д. О., ІМ-44 — ЛР5</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Лабораторна робота №5. Події. Регулярні вирази</h1>
+    <p class="subtitle">Крошка Дар'я Олександрівна, група ІМ-44. Варіант 59 → рядок 14 таблиці 1,
+      клітинка 14 таблиці 6×6, дія на подвійний клік — побічна діагональ.</p>
+
+    <section>
+      <h2>Завдання 1. Форма для заповнення</h2>
+
+      <form id="user-form" novalidate>
+        <div class="field" id="field-fio">
+          <label for="fio">ПІБ</label>
+          <input type="text" id="fio" name="fio" placeholder="Крошка Д. О." autocomplete="name">
+          <p class="hint">Формат: Прізвище І. П.</p>
+          <p class="error" id="error-fio"></p>
+        </div>
+
+        <div class="field" id="field-phone">
+          <label for="phone">Телефон</label>
+          <input type="text" id="phone" name="phone" placeholder="(067)-123-45-67" autocomplete="tel">
+          <p class="hint">Формат: (ЧЧЧ)-ЧЧЧ-ЧЧ-ЧЧ</p>
+          <p class="error" id="error-phone"></p>
+        </div>
+
+        <div class="field" id="field-idcard">
+          <label for="idcard">ID-card</label>
+          <input type="text" id="idcard" name="idcard" placeholder="АБ №123456">
+          <p class="hint">Формат: дві великі літери, № і шість цифр</p>
+          <p class="error" id="error-idcard"></p>
+        </div>
+
+        <div class="field" id="field-birth">
+          <label for="birth">Дата народження</label>
+          <input type="text" id="birth" name="birth" placeholder="19.06.2007">
+          <p class="hint">Формат: ЧЧ.ЧЧ.ЧЧЧЧ</p>
+          <p class="error" id="error-birth"></p>
+        </div>
+
+        <div class="field" id="field-email">
+          <label for="email">e-mail</label>
+          <input type="text" id="email" name="email" placeholder="kroshka@example.com" autocomplete="email">
+          <p class="hint">Формат: ім'я@домен.com</p>
+          <p class="error" id="error-email"></p>
+        </div>
+
+        <button type="submit" id="submit-btn">Підтвердити</button>
+        <p class="form-message" id="form-message" role="status"></p>
+      </form>
+    </section>
+
+    <section>
+      <h2>Завдання 2. Таблиця 6×6</h2>
+      <p class="task-note">
+        Реагує клітинка <strong>14</strong>: наведення — випадковий колір, клік — колір із палітри,
+        подвійний клік — зафарбовування побічної діагоналі.
+      </p>
+
+      <div class="table-controls">
+        <label for="palette">Колір із палітри:</label>
+        <input type="color" id="palette" value="#d12e2e">
+        <button type="button" id="reset-colors">Скинути кольори</button>
+      </div>
+
+      <table id="grid" class="grid"></table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
