@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лабораторна робота №6: отримання даних із зовнішнього API randomuser.me методами fetch і promise та виведення їх у форматі JSON. Крошка Д. О., ІМ-44, варіант 59.">
+  <meta name="keywords" content="JavaScript, JSON, API, fetch, promise, randomuser, ІМ-44, КПІ">
+  <meta name="author" content="Крошка Дар'я Олександрівна">
+  <title>Крошка Д. О., ІМ-44 — ЛР6</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Лабораторна робота №6. JSON, API, fetch і promise</h1>
+    <p class="subtitle">Крошка Дар'я Олександрівна, група ІМ-44. Варіант 59 → рядок 19 таблиці 1:
+      picture, city, name, cell, phone.</p>
+
+    <div class="controls">
+      <button type="button" id="load-btn">Отримати дані</button>
+      <label for="count">Кількість записів:</label>
+      <select id="count">
+        <option value="1">1</option>
+        <option value="3">3</option>
+        <option value="5" selected>5</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+
+    <p class="status" id="status" role="status">Натисніть кнопку, щоб завантажити дані з randomuser.me</p>
+
+    <div class="cards" id="cards"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
