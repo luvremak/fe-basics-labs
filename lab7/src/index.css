@@ -1,0 +1,170 @@
+/* ЛР7. Загальне оформлення: кольори й шрифти — як у попередніх лабораторних. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 16px 56px;
+  background-color: #f6f5f2;
+  color: #1f2328;
+  font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.lab-title h1 {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+}
+
+.lab-title p {
+  margin: 0 0 24px;
+  color: #55606b;
+  font-size: 0.95rem;
+}
+
+.task {
+  margin-bottom: 36px;
+}
+
+.task-title {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+  color: #55606b;
+}
+
+/* ---------- Завдання 1 ---------- */
+
+.sheet {
+  padding: 28px 32px 36px;
+  background-color: #ffffff;
+  border: 1px solid #dcd9d2;
+}
+
+.person-name {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+.content ul,
+.content ol {
+  padding-left: 24px;
+}
+
+.content figure {
+  margin: 24px 0 12px;
+}
+
+.content figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #55606b;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gallery img {
+  display: block;
+  height: auto;
+  border: 1px solid #c9c4bb;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  outline: 1px dashed #8b8b8b;
+  outline-offset: 2px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.controls button {
+  padding: 8px 18px;
+  font: inherit;
+  font-size: 0.95rem;
+  color: #1f2328;
+  background-color: #e9e6e0;
+  border: 1px solid #b7b1a7;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls button:hover:not(:disabled) {
+  background-color: #ded9d1;
+}
+
+.controls button:disabled {
+  color: #8b8b8b;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.status {
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+  color: #55606b;
+}
+
+/* ---------- Завдання 2 ---------- */
+
+.goods-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 16px;
+}
+
+.goods-card {
+  padding: 18px 16px 14px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #dcd9d2;
+  border-radius: 6px;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.goods-card:hover {
+  box-shadow: 0 6px 18px rgba(31, 35, 40, 0.1);
+  transform: translateY(-2px);
+}
+
+.goods-card img {
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto 8px;
+}
+
+.goods-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #0b5ed7;
+}
+
+.goods-card .price {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  color: #55606b;
+}
+
+.goods-card .price strong {
+  color: #1f2328;
+}
